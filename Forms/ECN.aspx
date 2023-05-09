@@ -233,10 +233,12 @@
             </table>
             <table>
                 <tr>
-                    <td><asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" /></td>
+                    <td>
+                        <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" ForeColor="#009933" /></td>
                     <td><asp:Button ID="Search" runat="server" Text="Search" OnClick="Search_Click" /></td>
                     <td><asp:Button ID="Update" runat="server" Text="Update" OnClick="Update_Click" /></td>
-                    <td><asp:Button ID="Delete" runat="server" Text="Delete" OnClick="Delete_Click" /></td>
+                    <td>
+                        <asp:Button ID="Delete" runat="server" Text="Delete" OnClick="Delete_Click" ForeColor="Red" /></td>
                 
                 </tr>
             </table>
