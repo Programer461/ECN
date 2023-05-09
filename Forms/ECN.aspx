@@ -52,10 +52,14 @@
                 <tr>
                     <td>By: </td>
                     <td>
-                        <asp:DropDownList ID="ECN_By1" runat="server"  DataTextField="fullname" DataValueField="fullname" DataSourceID="M2M2" AppendDataBoundItems="True"></asp:DropDownList></td>
+                        <asp:DropDownList ID="ECN_By1" runat="server" DataTextField="fullname" DataValueField="fullname" DataSourceID="M2M2" AppendDataBoundItems="True" AutoPostBack="True">
+                            <asp:ListItem Selected="True">Select</asp:ListItem>
+                        </asp:DropDownList></td>
                     <td>Responsible Engineer: </td>
                     <td>
-                        <asp:DropDownList ID="ProjectLeader1" runat="server" DataTextField="ClockName" DataValueField="ClockName" DataSourceID="M2M2" AppendDataBoundItems="True"></asp:DropDownList></td>
+                        <asp:DropDownList ID="ProjectLeader1" runat="server" DataTextField="ClockName" DataValueField="ClockName" DataSourceID="M2M2" AppendDataBoundItems="True" AutoPostBack="True">
+                            <asp:ListItem Selected="True" Value="Select"></asp:ListItem>
+                        </asp:DropDownList></td>
                 </tr>
                 
             </table>
@@ -238,6 +242,6 @@
             </table>
         </div>
     </form>
-    <asp:SqlDataSource ID="M2M2" runat="server" ConnectionString="<%$ ConnectionStrings:M2Mdata03ConnectionString %>" SelectCommand="SELECT * FROM [ENGTIMEEMPL]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="M2M2" runat="server" ConnectionString="<%$ ConnectionStrings:M2Mdata03ConnectionString %>" SelectCommand="SELECT * FROM [ENGTIMEEMPL] ORDER BY [fullname]"></asp:SqlDataSource>
 </body>
 </html>
