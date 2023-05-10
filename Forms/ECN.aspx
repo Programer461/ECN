@@ -23,7 +23,7 @@
                         <asp:TextBox ID="ECNNO1" runat="server" Width="100px"></asp:TextBox></td>
                     <td>Date:</td>
                     <td>
-                        <asp:TextBox ID="TodaysDate1" TextMode="Date" runat="server" Width="100px"> </asp:TextBox></td>
+                        <asp:TextBox ID="TodaysDate1" TextMode="Date" runat="server" Width="100px" BorderStyle="Ridge">Select Date </asp:TextBox></td>
                 </tr>
                 
             </table>
@@ -52,13 +52,13 @@
                 <tr>
                     <td>By: </td>
                     <td>
-                        <asp:DropDownList ID="ECN_By1" runat="server" DataTextField="fullname" DataValueField="fullname" DataSourceID="M2M2" AppendDataBoundItems="True" AutoPostBack="True">
-                            <asp:ListItem Selected="True">Select</asp:ListItem>
+                        <asp:DropDownList ID="ECN_By1" runat="server" DataTextField="fullname" DataValueField="fullname" DataSourceID="M2M2" AppendDataBoundItems="True" AutoPostBack="True" EnableViewState="true" ViewStateMode="Disabled">
+                            <asp:ListItem Selected="True"></asp:ListItem>
                         </asp:DropDownList></td>
                     <td>Responsible Engineer: </td>
                     <td>
                         <asp:DropDownList ID="ProjectLeader1" runat="server" DataTextField="ClockName" DataValueField="ClockName" DataSourceID="M2M2" AppendDataBoundItems="True" AutoPostBack="True">
-                            <asp:ListItem Selected="True" Value="Select"></asp:ListItem>
+                            <asp:ListItem Selected="True" ></asp:ListItem>
                         </asp:DropDownList></td>
                 </tr>
                 
@@ -72,7 +72,7 @@
             <table>
                 <tr>
                     <td>
-                        <asp:CheckBox ID="M2MRouting1" runat="server" Text="M2M Routing:" /></td>
+                        <asp:CheckBox ID="M2MRouting1" runat="server" Text="M2M Routing:" AutoPostBack="True" /></td>
                    <td>
                         <asp:CheckBox ID="Fabrication1" runat="server" Text="Fabrication:" /></td>
                     <td>
@@ -157,7 +157,7 @@
                     <td>Root Cause/Reason for ECN:</td>
                     <td>
                         <asp:DropDownList ID="RootCause1" runat="server">
-                            <asp:ListItem>Select...</asp:ListItem>
+                            <asp:ListItem></asp:ListItem>
                             <asp:ListItem>Customer Change</asp:ListItem>
                             <asp:ListItem>Planned ECN</asp:ListItem>
                             <asp:ListItem>Shop Error</asp:ListItem>

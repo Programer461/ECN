@@ -105,7 +105,7 @@ namespace Forms
         protected void Search_Click(object sender, EventArgs e)
         {
             string ECNNO = ECNNO1.Text.Trim();
-            string ECN_by = ECN_By1.SelectedItem.ToString();
+            string CurrentJobAffect = CurrentJobAffect1.Checked ? "1" : "0";
 
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["M2Mdata03ConnectionString"].ConnectionString))
             {
@@ -133,37 +133,37 @@ namespace Forms
                   */
                     while (reader.Read())
                     {
-                        ECNNO1.Text = reader.GetValue(1).ToString();
-                        TodaysDate1.Text = reader.GetValue(2).ToString();
-                        DrawingNo1.Text = reader.GetValue(3).ToString();
-                        FilePath1.Text = reader.GetValue(4).ToString();
-                        RevNo1.Text = reader.GetValue(5).ToString();
-                        ECN_By1.Text = reader.GetValue(6).ToString();
-                        ProjectLeader1.Text = reader.GetValue(7).ToString();
-                        JobNo1.Text = reader.GetValue(8).ToString();
-                        SONo1.Text = reader.GetValue(9).ToString();
-                        Customer1.Text = reader.GetValue(10).ToString();
-                        CurrentJobAffect1.Text = reader.GetValue(11).ToString();
-                        ReasonforECN1.Text = reader.GetValue(12).ToString();
-                        MFGParts1.Text = reader.GetValue(13).ToString();
-                        PurchParts1.Text = reader.GetValue(14).ToString();
-                        M2MRouting1.Text = reader.GetValue(15).ToString();
-                        MachShop1.Text = reader.GetValue(16).ToString();
-                        Fabrication1.Text = reader.GetValue(17).ToString();
-                        Assembly1.Text = reader.GetValue(18).ToString();
-                        Purchasing1.Text = reader.GetValue(19).ToString();
-                        EngineeringLabor1.Text = reader.GetValue(20).ToString();
-                        ShopLabor1.Text= reader.GetValue(21).ToString();
-                        Materials1.Text = reader.GetValue(22).ToString();
-                        TotalDirectCost1.Text = reader.GetValue(23).ToString();
-                        ShopComplete1.Text = reader.GetValue(24).ToString();
-                        ShopStarted1.Text = reader.GetValue(25).ToString();
-                        FutureWarranty1.Text = reader.GetValue(26).ToString();
-                        PurchAware1.Text = reader.GetValue(27).ToString();
-                        SEApproved1.Text = reader.GetValue(28).ToString();
-                        TDApproved1.Text = reader.GetValue(29).ToString();
-                        RootCause1.Text = reader.GetValue(30).ToString();
-                        PurchaseCost1.Text = reader.GetValue(31).ToString();
+                        ECNNO1.Text = reader.GetValue(0).ToString();
+                        TodaysDate1.Text = reader.GetValue(1).ToString();
+                        DrawingNo1.Text = reader.GetValue(2).ToString();
+                        FilePath1.Text = reader.GetValue(3).ToString();
+                        RevNo1.Text = reader.GetValue(4).ToString();
+                        ECN_By1.SelectedValue = reader.GetValue(5).ToString();
+                        ProjectLeader1.SelectedValue = reader.GetValue(6).ToString();
+                        JobNo1.Text = reader.GetValue(7).ToString();
+                        SONo1.Text = reader.GetValue(8).ToString();
+                        Customer1.Text = reader.GetValue(9).ToString();
+                        CurrentJobAffect1.Text = reader.GetValue(10).ToString();
+                        ReasonforECN1.Text = reader.GetValue(11).ToString();
+                        MFGParts1.Text = reader.GetValue(12).ToString();
+                        PurchParts1.Text = reader.GetValue(13).ToString();
+                        M2MRouting1.Text = reader.GetValue(14).ToString();
+                        MachShop1.Text = reader.GetValue(15).ToString();
+                        Fabrication1.Text = reader.GetValue(16).ToString();
+                        Assembly1.Text = reader.GetValue(17).ToString();
+                        Purchasing1.Text = reader.GetValue(18).ToString();
+                        EngineeringLabor1.Text = reader.GetValue(19).ToString();
+                        ShopLabor1.Text= reader.GetValue(20).ToString();
+                        Materials1.Text = reader.GetValue(21).ToString();
+                        TotalDirectCost1.Text = reader.GetValue(22).ToString();
+                        ShopComplete1.Text = reader.GetValue(23).ToString();
+                        ShopStarted1.Text = reader.GetValue(24).ToString();
+                        FutureWarranty1.Text = reader.GetValue(25).ToString();
+                        PurchAware1.Text = reader.GetValue(26).ToString();
+                        SEApproved1.Text = reader.GetValue(27).ToString();
+                        TDApproved1.Text = reader.GetValue(28).ToString();
+                        RootCause1.Text = reader.GetValue(29).ToString();
+                        PurchaseCost1.Text = reader.GetValue(30).ToString();
 
                     }
                     con.Close();
